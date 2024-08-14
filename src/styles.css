@@ -1,0 +1,268 @@
+/* Allgemeine Stile für die gesamte Seite */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #e0f2f1;
+    color: #000;
+    background-image: url('world_map.png');
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #66bb6a;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 2px solid #ff9800;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 40px;
+}
+
+header .logo {
+    width: 200px;
+    height: auto;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    gap: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 4em;
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+}
+
+nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: #ff9800;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #f57c00;
+    text-decoration: none;
+}
+
+.main-container {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+section {
+    background-color: #ff9800;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ff9800;
+}
+
+.intro {
+    background-color: #66bb6a;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Sidebar (Link-Menü) */
+.sidebar {
+    flex: 0 0 200px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+/* Tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #000;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #66bb6a;
+    cursor: pointer;
+    color: #000;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* RTL Stile */
+html[dir="rtl"] nav {
+    right: auto;
+    left: 10%;
+}
+
+html[dir="rtl"] .sidebar {
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+html[dir="rtl"] .main-content {
+    order: 2;
+}
+
+footer {
+    background-color: #66bb6a;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #ff9800;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Media Queries für responsives Design */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .header-content {
+        align-items: center;
+        gap: 15px;
+    }
+
+    nav {
+        position: static;
+        margin-top: 20px;
+        transform: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .sidebar {
+        flex: 1 1 auto;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+        padding: 10px 15px;
+    }
+
+    .sidebar {
+        font-size: 0.9em;
+        padding: 15px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+        padding: 8px 12px;
+    }
+
+    .sidebar {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+}
