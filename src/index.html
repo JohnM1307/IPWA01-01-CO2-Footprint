@@ -11,7 +11,7 @@
     <img src="logo.png" alt="Logo" class="logo">
     <div class="header-content">
         <h1>Transparenz der CO2-Emissionen</h1>
-        <nav>
+        <nav> <!-- Navigationsleiste mit Links zu verschiedenen Abschnitten der Seite -->
             <ul>
                 <li><a href="#menu">Menü</a></li>
                 <li><a href="#about">Über uns</a></li>
@@ -23,7 +23,7 @@
 </header>
 <main>
     <div class="main-container">
-        <aside class="sidebar">
+        <aside class="sidebar"> <!-- Seitenleiste mit zusätzlichen Links -->
             <h2>Links</h2>
             <ul>
                 <li><a href="#menu">Willkommen</a></li>
@@ -62,6 +62,7 @@
 
                 <label for="filterCountry">Filter nach Land:</label>
                 <select id="filterCountry">
+                    <!-- Dropdown-Menü zur Filterung der Tabelle nach Ländern -->
                     <option value="all">Alle</option>
                     <option value="Deutschland">Deutschland</option>
                     <option value="USA">USA</option>
@@ -71,6 +72,7 @@
 
                 <label for="filterCompany">Filter nach Unternehmen:</label>
                 <select id="filterCompany">
+                    <!-- Dropdown-Menü zur Filterung der Tabelle nach Unternehmen -->
                     <option value="all">Alle</option>
                     <option value="Volkswagen">Volkswagen</option>
                     <option value="Siemens">Siemens</option>
@@ -84,11 +86,12 @@
                     <option value="Tata Steel">Tata Steel</option>
                 </select>
 
-                <button onclick="filterTable()">Filtern</button>
+                <button onclick="filterTable()">Filtern</button> <!-- Button zum klicken-->
 
                 <table id="co2Table">
                     <thead>
                     <tr>
+                        <!-- Tabellenkopfzeile, jede Spalte klicknbar = sortiert Daten -->
                         <th onclick="sortTable(0)">Land</th>
                         <th onclick="sortTable(1)">Unternehmen</th>
                         <th onclick="sortTable(2)">CO2-Emissionen (in Tonnen)</th>
@@ -155,12 +158,12 @@
         </div>
     </div>
 </main>
-<footer>
+<footer> <!-- Fußzeile der Seite mit rechtlichen Informationen -->
     <p>&copy; 2024 CO2-Footprint. Alle Rechte vorbehalten.</p>
     <p>Impressum | Datenschutz | Nutzungsbedingungen</p>
 </footer>
-<script src="script.js"></script>
-<script>
+<script src="script.js"></script> <!-- Einbindung des JavaScript-Datei -->
+<script> <!-- Sortierfunktion + Filterfunktion-->
     function sortTable(n) {
      const table = document.getElementById("co2Table");
      let switching = true, shouldSwitch, switchcount = 0;
