@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO2-Footprint</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header data-text-direction="ltr">
+    <img src="logo.png" alt="Logo" class="logo">
+    <div class="header-content">
+        <h1>Transparenz der CO2-Emissionen</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menü</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#data">Tabelle</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="main-container">
+        <aside class="sidebar">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="#menu">Willkommen</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#data">Tabelle</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </aside>
+        <div class="main-content">
+            <section id="menu" class="intro">
+                <h2 class="fancy-underline">Willkommen auf unserer Webseite</h2>
+                <p>Herzlich willkommen auf unserer Website! Wir freuen uns, dass Sie den Weg zu uns gefunden haben.</p>
+                <p>Unsere Plattform wurde von einer großen Non-Profit-Organisation ins Leben gerufen, die sich mit dem bedeutenden und drängenden Thema des Klimawandels beschäftigt. Unser Ziel ist es, mehr Transparenz über die CO2-Emissionen weltweit zu schaffen. Durch detaillierte und leicht verständliche Informationen möchten wir ein Bewusstsein für die Emissionen von Unternehmen und Ländern fördern und zur globalen Reduzierung der CO2-Emissionen beitragen.</p>
+                <p><strong>Was wir tun:</strong></p>
+                <ul>
+                    <li><strong>Daten bereitstellen:</strong> Wir bieten Ihnen umfassende Daten über die jährlichen CO2-Emissionen von Ländern und Unternehmen. Diese Informationen sind öffentlich zugänglich, damit jeder einen klaren Überblick darüber erhält, wie groß der ökologische Fußabdruck verschiedener Akteure ist.</li>
+                    <li><strong>Transparenz fördern:</strong> Unser Anliegen ist es, eine transparente und verständliche Darstellung von CO2-Emissionen zu gewährleisten. Dies soll Ihnen helfen, fundierte Entscheidungen zu treffen und zu verstehen, welche Maßnahmen ergriffen werden können, um die Umwelt zu schützen.</li>
+                    <li><strong>Bewusstsein schaffen:</strong> Durch die Präsentation dieser Daten hoffen wir, das Bewusstsein für den Klimawandel zu schärfen und einen Dialog über notwendige Veränderungen anzuregen.</li>
+                </ul>
+                <p><strong>Was Sie hier finden:</strong></p>
+                <ul>
+                    <li><strong>Übersichtliche Tabellen:</strong> In unserem Tabellenbereich finden Sie detaillierte Informationen zu den Emissionen der wichtigsten Länder und Unternehmen weltweit. Diese Tabellen sind nach verschiedenen Kriterien filterbar und bieten eine klare Übersicht.</li>
+                    <li><strong>Über uns:</strong> Erfahren Sie mehr über unsere Organisation, unsere Mission und die Maßnahmen, die wir ergreifen, um den Klimawandel zu bekämpfen.</li>
+                    <li><strong>Kontaktmöglichkeiten:</strong> Wir stehen Ihnen für Fragen und Anregungen zur Verfügung. Besuchen Sie unseren Kontaktbereich, um mit uns in Verbindung zu treten.</li>
+                </ul>
+                <p>Wir laden Sie ein, sich auf unserer Website umzusehen und mehr über die Herausforderungen und Möglichkeiten im Bereich der CO2-Reduktion zu erfahren. Gemeinsam können wir einen positiven Beitrag für unseren Planeten leisten!</p>
+                <p>Vielen Dank für Ihr Interesse und Ihr Engagement für den Klimaschutz.</p>
+            </section>
+            <section id="about">
+                <h2>Über uns</h2>
+                <p>Hier finden Sie Informationen über unsere Organisation und unsere Mission zur Reduzierung der CO2-Emissionen.</p>
+            </section>
+            <section id="data">
+                <h2>Tabelle</h2>
+                <p>In diesem Abschnitt werden Sie detaillierte Informationen zu CO2-Emissionen finden.</p>
+
+                <label for="filterCountry">Filter nach Land:</label>
+                <select id="filterCountry">
+                    <option value="all">Alle</option>
+                    <option value="Deutschland">Deutschland</option>
+                    <option value="USA">USA</option>
+                    <option value="China">China</option>
+                    <option value="Indien">Indien</option>
+                </select>
+
+                <label for="filterCompany">Filter nach Unternehmen:</label>
+                <select id="filterCompany">
+                    <option value="all">Alle</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Siemens">Siemens</option>
+                    <option value="BASF">BASF</option>
+                    <option value="Bayer">Bayer</option>
+                    <option value="ExxonMobil">ExxonMobil</option>
+                    <option value="Chevron">Chevron</option>
+                    <option value="Sinopec">Sinopec</option>
+                    <option value="China National Petroleum">China National Petroleum</option>
+                    <option value="Reliance Industries">Reliance Industries</option>
+                    <option value="Tata Steel">Tata Steel</option>
+                </select>
+
+                <button onclick="filterTable()">Filtern</button>
+
+                <table id="co2Table">
+                    <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Land</th>
+                        <th onclick="sortTable(1)">Unternehmen</th>
+                        <th onclick="sortTable(2)">CO2-Emissionen (in Tonnen)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Deutschland</td>
+                        <td>Volkswagen</td>
+                        <td>5000000</td>
+                    </tr>
+                    <tr>
+                        <td>Deutschland</td>
+                        <td>Siemens</td>
+                        <td>3000000</td>
+                    </tr>
+                    <tr>
+                        <td>Deutschland</td>
+                        <td>BASF</td>
+                        <td>4000000</td>
+                    </tr>
+                    <tr>
+                        <td>Deutschland</td>
+                        <td>Bayer</td>
+                        <td>2000000</td>
+                    </tr>
+                    <tr>
+                        <td>USA</td>
+                        <td>ExxonMobil</td>
+                        <td>7000000</td>
+                    </tr>
+                    <tr>
+                        <td>USA</td>
+                        <td>Chevron</td>
+                        <td>6000000</td>
+                    </tr>
+                    <tr>
+                        <td>China</td>
+                        <td>Sinopec</td>
+                        <td>8000000</td>
+                    </tr>
+                    <tr>
+                        <td>China</td>
+                        <td>China National Petroleum</td>
+                        <td>7500000</td>
+                    </tr>
+                    <tr>
+                        <td>Indien</td>
+                        <td>Reliance Industries</td>
+                        <td>6500000</td>
+                    </tr>
+                    <tr>
+                        <td>Indien</td>
+                        <td>Tata Steel</td>
+                        <td>5500000</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="contact">
+                <h2>Kontakt</h2>
+                <p>Hier können Sie uns kontaktieren, um mehr Informationen zu erhalten oder Fragen zu stellen.</p>
+            </section>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>&copy; 2024 CO2-Footprint. Alle Rechte vorbehalten.</p>
+    <p>Impressum | Datenschutz | Nutzungsbedingungen</p>
+</footer>
+<script src="script.js"></script>
+<script>
+    function sortTable(n) {
+     const table = document.getElementById("co2Table");
+     let switching = true, shouldSwitch, switchcount = 0;
+     let rows, i, x, y, dir;
+
+     dir = "asc"; // Set the sorting direction to ascending
+
+     while (switching) {
+         switching = false;
+         rows = table.rows;
+
+         for (i = 1; i < (rows.length - 1); i++) {
+             shouldSwitch = false;
+             x = rows[i].getElementsByTagName("TD")[n];
+             y = rows[i + 1].getElementsByTagName("TD")[n];
+
+             if (dir == "asc") {
+                 if (x.innerText.toLowerCase() > y.innerText.toLowerCase()) {
+                     shouldSwitch = true;
+                     break;
+                 }
+             } else if (dir == "desc") {
+                 if (x.innerText.toLowerCase() < y.innerText.toLowerCase()) {
+                     shouldSwitch = true;
+                     break;
+                 }
+             }
+         }
+
+         if (shouldSwitch) {
+             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+             switching = true;
+             switchcount++;
+         } else {
+             if (switchcount == 0 && dir == "asc") {
+                 dir = "desc";
+                 switching = true;
+             }
+         }
+     }
+ }
+
+ function filterTable() {
+     const filterCountry = document.getElementById("filterCountry").value;
+     const filterCompany = document.getElementById("filterCompany").value;
+     const table = document.getElementById("co2Table");
+     const tr = table.getElementsByTagName("tr");
+
+     for (let i = 1; i < tr.length; i++) {
+         const tdCountry = tr[i].getElementsByTagName("td")[0];
+         const tdCompany = tr[i].getElementsByTagName("td")[1];
+
+         if (tdCountry && tdCompany) {
+             const countryValue = tdCountry.innerText;
+             const companyValue = tdCompany.innerText;
+
+             if ((filterCountry === "all" || countryValue === filterCountry) &&
+                 (filterCompany === "all" || companyValue === filterCompany)) {
+                 tr[i].style.display = "";
+             } else {
+                 tr[i].style.display = "none";
+             }
+         }
+     }
+ }
+
+</script>
+
+</body>
+</html>
