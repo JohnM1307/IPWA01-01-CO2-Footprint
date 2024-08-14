@@ -7,6 +7,7 @@ Unternehmen und Länder wie viel CO2 jährlich emittieren, soll eine öffentlich
 gerufen werden. Deine Aufgabe ist es, diese Seite zu entwerfen und umzusetzen. 
 
   a) Richte ein öffentliches Code-Repository für Deine Webseite ein, z. B. in GitHub. 
+  
   b) Entwickle unter Zuhilfenahme moderner CSS- und/oder JavaScript-Frameworks eine Webanwendung, 
      welche unter Berücksichtigung der oben beschriebenen Fallstudie die folgenden Anforderungen erfüllt: 
       a. Die Webseite besitzt einen Titel und ein Logo. 
@@ -20,8 +21,10 @@ gerufen werden. Deine Aufgabe ist es, diese Seite zu entwerfen und umzusetzen.
          Unternehmen sortiert und gefiltert werden kann. 
       f. Alle Eingabefelder müssen so abgesichert sein, dass kein injizierter Code ausgeführt werden 
          kann. 
+         
   c) Dokumentiere Dein Ergebnis schriftlich und lege den Code, falls nicht bereits im Schritt 2 geschehen, im 
      Code-Repository ab. 
+     
 Hinweis: Bewertet wird Deine schriftliche Dokumentation und Umsetzungskonzeption, die Du sinnvoll mit 
 Screenshots, Verweisen und gegebenenfalls Quellen ergänzt. Platziere bitte darüber hinaus einen Link auf Dein 
 öffentliches Repository auf dem Deckblatt der Dokumentation, damit der/die Tutor:in Deinen Quellcode 
