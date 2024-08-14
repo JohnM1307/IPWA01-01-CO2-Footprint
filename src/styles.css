@@ -6,18 +6,18 @@ html, body {
 }
 
 body {
-    display: flex;
+    display: flex; /* Nutzt Flexbox für die Layoutgestaltung */
     flex-direction: column;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Schriftart */
     background-color: #e0f2f1;
     color: #000;
     background-image: url('world_map.png');
     background-size: cover;
     background-position: bottom center;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Fixiert das Hintergrundbild, sodass es beim Scrollen an Ort und Stelle bleibt */
 }
 
-header {
+header { /* header Einstellungen -> auch Flexbox */
     background-color: #66bb6a;
     padding: 20px;
     display: flex;
@@ -29,7 +29,7 @@ header {
     gap: 40px;
 }
 
-header .logo {
+header .logo { /*Logo Einstellungen. Breite + Höhe -> Automatisch */
     width: 200px;
     height: auto;
 }
@@ -157,7 +157,7 @@ tr:nth-child(odd) {
     background-color: #ffffff;
 }
 
-/* RTL Stile */
+/* RTL Stile -> Info aus script.js */
 html[dir="rtl"] nav {
     right: auto;
     left: 10%;
@@ -182,7 +182,7 @@ footer {
     box-sizing: border-box;
 }
 
-/* Media Queries für responsives Design */
+/* Responsives Design */
 @media (max-width: 1024px) {
     header {
         flex-direction: column;
